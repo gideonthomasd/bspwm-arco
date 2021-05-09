@@ -22,6 +22,10 @@ cd openbox
 chmod +x autostart
 cd ..
 
+cd tint2
+chmod +x tint2rc
+chmod +x tint2-sessionfile
+cd ..
 
 #######################################################
 
