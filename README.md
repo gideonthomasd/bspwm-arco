@@ -1,6 +1,9 @@
 # bspwm-arco
 
-Install arco - no files needed
+Install arco - no files needed. sudo pacman -Syyu
+
 chmod +x *.sh
+
 run ./100 etc files
-sudo systemctl 
+
+sudo systemctl enable lightdm
