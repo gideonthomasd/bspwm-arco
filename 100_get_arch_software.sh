@@ -90,6 +90,10 @@ bspwm
 cronie
 linux-lts
 linux-lts-headers
+openbox
+obconf
+tint2
+obmenu-generator
 )
 
 count=0
