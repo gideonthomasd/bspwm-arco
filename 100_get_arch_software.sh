@@ -88,6 +88,8 @@ xdotool
 pacman-contrib
 bspwm
 cronie
+linux-lts
+linux-lts-headers
 )
 
 count=0
