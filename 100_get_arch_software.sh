@@ -94,6 +94,7 @@ openbox
 obconf
 tint2
 obmenu-generator
+nitrogen
 )
 
 count=0
