@@ -18,6 +18,11 @@ chmod +x *.sh
 cd ..
 cd ..
 
+cd openbox
+chmod +x autostart
+cd ..
+
+
 #######################################################
 
 if [ ! -d $HOME"/.config" ] 
@@ -60,6 +65,20 @@ then
 mkdir -p $HOME"/.config/jgmenu"
 fi
 
+if [ ! -d $HOME"/.config/openbox" ]
+then
+mkdir -p $HOME"/.config/openbox"
+fi
+
+if [ ! -d $HOME"/.config/obmenu-generator" ]
+then
+mkdir -p $HOME"/.config/obmenu-generator"
+fi
+
+if [ ! -d $HOME"/.config/tint2" ]
+then
+mkdir -p $HOME"/.config/tint2"
+fi
 
 #[ -d $HOME"/.config/termite" ] || mkdir -p $HOME"/.config/termite"
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
@@ -89,6 +108,18 @@ cd ..
 
 cd jgmenu
 cp -r * ~/.config/jgmenu
+cd ..
+
+cd openbox
+cp -r * ~/.config/openbox
+cd ..
+
+cd obmenu-generator
+cp -r * ~/.config/obmenu-generator
+cd ..
+
+cd tint2
+cp -r * ~/.config/tint2
 cd ..
 
 mv ~/.bashrc ~/.bashrc-$(date +%Y.%m.%d-%H.%M.%S)
