@@ -30,9 +30,9 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 	{sep => "ArcoLinux"},
     #          COMMAND                 LABEL                ICON
-    {item => ['exo-open --launch TerminalEmulator',                                 'Terminal',          'terminal']},
-    {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
-    {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
+    {item => ['termite',                                 'Terminal',          'terminal']},
+    {item => ['thunar',                                      'File Manager',      'file-manager']},
+    {item => ['brave ',                                      'Web Browser',       'webbrowser-app']},
     {item => ['geany',                                                              'Text Editor',       'geany']},
     {sep => undef},
 
@@ -56,14 +56,14 @@ our $SCHEMA = [
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
     {sep => undef},
-    {pipe => ['am-places-pipemenu',         'Places',       'folder']},
-    {pipe => ['am-recent-files-pipemenu',   'Recent Files', 'folder-recent']},
+    #{pipe => ['am-places-pipemenu',         'Places',       'folder']},
+    #{pipe => ['am-recent-files-pipemenu',   'Recent Files', 'folder-recent']},
 
     ## Custom advanced settings
     #{sep => "Settings"},
-    {sep => undef},
+    #{sep => undef},
 
-    {pipe => ['am-conky-pipemenu',  'Conky',        'conky']},
+    #{pipe => ['am-conky-pipemenu',  'Conky',        'conky']},
 
     {begin_cat => ['Preferences', 'theme']},
 
@@ -80,7 +80,7 @@ our $SCHEMA = [
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {sep => undef},
 
-        {pipe => ['am-compositor',      'Compositor',      'compton']},
+        #{pipe => ['am-compositor',      'Compositor',      'compton']},
         {begin_cat => ['Openbox', 'openbox']},
             {item => ["$editor ~/.config/openbox/menu.xml",     'Edit menu.xml',                 'text-xml']},
             {item => ["$editor ~/.config/openbox/rc.xml",       'Edit rc.xml',                   'text-xml']},
@@ -94,7 +94,7 @@ our $SCHEMA = [
             {item => ['openbox --restart',                      'Restart Openbox',               'openbox']},
             {item => ['openbox --reconfigure',                  'Reconfigure Openbox',           'openbox']},
         {end_cat => undef},
-        {pipe => ['am-tint2-pipemenu',  'Tint2',        'tint2']},
+        #{pipe => ['am-tint2-pipemenu',  'Tint2',        'tint2']},
         {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
     {end_cat => undef},
 
@@ -126,11 +126,11 @@ our $SCHEMA = [
         {item => ['obmenu-generator -d',       'Refresh Icon Set',                  'gtk-refresh']},
     {end_cat => undef},
 
-    {sep => undef},
-    {pipe => ['am-need-to-know-pipemenu',      'Need To Know',                      'stock_about']},
-    {sep  => undef},
-    {pipe => ['am-help-pipemenu',              'Help &amp; Resources',              'info']},
-    {pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
+    #{sep => undef},
+    #{pipe => ['am-need-to-know-pipemenu',      'Need To Know',                      'stock_about']},
+    #{sep  => undef},
+    #{pipe => ['am-help-pipemenu',              'Help &amp; Resources',              'info']},
+    #{pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
     ## The xscreensaver lock command
     #{item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
     {sep => undef},
