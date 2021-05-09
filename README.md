@@ -7,3 +7,5 @@ chmod +x *.sh
 run ./100 etc files
 
 sudo systemctl enable lightdm
+
+Includes openbox uses shortcuts
