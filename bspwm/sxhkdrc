@@ -37,8 +37,11 @@ super + F5
 super + x
 	arcolinux-logout
 
+F2
+	jgmenu_run
+
 F9
-  jgmenu_run
+    brave
 
 F10
 	pamac-manager
