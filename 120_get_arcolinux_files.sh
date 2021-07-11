@@ -46,7 +46,7 @@ timeshift
 polybar
 brave
 arcolinux-logout-git
-pamac-aur
+pamac-all
 )
 
 count=0
