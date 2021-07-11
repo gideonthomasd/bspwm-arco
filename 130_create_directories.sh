@@ -33,6 +33,8 @@ if [ ! -d $HOME"/.config" ]
 then mkdir -p $HOME"/.config"
 fi
 
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+
 if [ ! -d $HOME"/.config/polybar" ] 
 then
 mkdir -p $HOME"/.config/polybar"
@@ -88,7 +90,7 @@ fi
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 #[ -d $HOME"/.config/jgmenu" ] || mkdir -p $HOME"/.config/jgmenu"
 
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+
 
 cd polybar
 cp -r * ~/.config/polybar
