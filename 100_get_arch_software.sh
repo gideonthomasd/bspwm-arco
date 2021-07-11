@@ -95,6 +95,7 @@ obconf
 tint2
 obmenu-generator
 nitrogen
+flatpak
 )
 
 count=0
