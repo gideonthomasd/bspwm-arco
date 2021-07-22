@@ -131,6 +131,8 @@ cd ..
 mv ~/.bashrc ~/.bashrc-$(date +%Y.%m.%d-%H.%M.%S)
 cp bashrc ~/.bashrc
 
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 #cp xprofile ~/.xprofile
 #cp getSession.sh ~/getSession.sh - now inside dwm-6.2/system
 
