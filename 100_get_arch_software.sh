@@ -96,6 +96,7 @@ tint2
 obmenu-generator
 nitrogen
 flatpak
+lxterminal
 )
 
 count=0
