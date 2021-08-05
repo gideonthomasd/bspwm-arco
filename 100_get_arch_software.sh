@@ -62,7 +62,7 @@ dmenu
 rofi
 neofetch
 xterm
-termite
+#termite
 xfce4-terminal
 xed
 networkmanager
