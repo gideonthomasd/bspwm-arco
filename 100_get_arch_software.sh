@@ -35,6 +35,7 @@ echo "Installation of the development packages"
 ###############################################################################
 
 list=(
+ttc-iosevka
 plank
 xcompmgr
 feh
