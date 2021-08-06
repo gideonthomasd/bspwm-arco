@@ -133,6 +133,13 @@ cp bashrc ~/.bashrc
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+echo "SNAP: For menu entry copy /var/lib/snapd/desktop/applications to /home/phil/.local/share/applications"
+echo "SNAP : From sxhkd do 'snap run brave' instead of just 'brave' "
+echo "Appimage: Get appimagelauncher from releases.  Do 'appimagelauncher-lite...AppImage install' in terminal."
+echo "Get Beautyline icon from gnome.  Extract and copy into /usr/share/icons."
+echo "Get Prismatic theme and put in .themmes folder.  Obconf"
+echo "greeter-hide-users=false  in /etc/lightdm/lightdm.conf"
+
 #cp xprofile ~/.xprofile
 #cp getSession.sh ~/getSession.sh - now inside dwm-6.2/system
 
