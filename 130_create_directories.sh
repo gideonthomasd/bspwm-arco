@@ -48,6 +48,7 @@ mkdir -p $HOME"/.config/polybar"
 fi
 
 mkdir -p $HOME"/.config/polybar-bspwm"
+mkdir -p $HOME"/.config/lxterminal"
 
 if [ ! -d $HOME"/.config/bspwm" ]
 then
@@ -98,7 +99,9 @@ fi
 #[ -d $HOME"/.config/termite" ] || mkdir -p $HOME"/.config/termite"
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 #[ -d $HOME"/.config/jgmenu" ] || mkdir -p $HOME"/.config/jgmenu"
-
+cd lxterminal
+cp -r * ~/.config/lxterminal
+cd ..
 
 
 cd polybar
