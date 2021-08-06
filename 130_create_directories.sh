@@ -18,6 +18,13 @@ chmod +x *.sh
 cd ..
 cd ..
 
+cd polybar-bspwm
+chmod +x *.sh
+cd scripts
+chmod +x *.sh
+cd ..
+cd ..
+
 cd openbox
 chmod +x autostart
 cd ..
