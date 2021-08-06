@@ -14,11 +14,11 @@ setxkbmap gb &
 lxpolkit &
 xcompmgr -c &
 
-$HOME/.config/polybar/launch.sh
+$HOME/.config/polybar-bspwm/launch.sh
 ######PATH not set yet############
 #~/.local/bin/succade &
 
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV V VI
 
 bspc config border_width         2
 bspc config window_gap          8

@@ -12,7 +12,7 @@
 
 # Set background image
 xcompmgr &
-nitrogen --restore
+~/.config/bspwm/testwallpaper &
 
 tint2 &
 #$HOME/.config/polybar/launch.sh &
@@ -52,7 +52,7 @@ xfce4-power-manager &
 
 (nm-applet) &
 
-#(plank) &
+(plank) &
 
 #discord &
 

@@ -576,7 +576,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>termite</command>
+        <command>lxterminal</command>
       </action>
     </keybind>
     <keybind key="S-W-Return">
