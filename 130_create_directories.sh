@@ -47,6 +47,8 @@ then
 mkdir -p $HOME"/.config/polybar"
 fi
 
+mkdir -p $HOME"/.config/polybar-bspwm"
+
 if [ ! -d $HOME"/.config/bspwm" ]
 then
 mkdir -p $HOME"/.config/bspwm"
@@ -101,6 +103,10 @@ fi
 
 cd polybar
 cp -r * ~/.config/polybar
+cd ..
+
+cd polybar-bspwm
+cp -r * ~/.config/polybar-bspwm
 cd ..
 
 cd bspwm
