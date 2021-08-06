@@ -98,6 +98,7 @@ obmenu-generator
 nitrogen
 flatpak
 lxterminal
+gparted
 )
 
 count=0
