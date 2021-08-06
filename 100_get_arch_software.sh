@@ -35,6 +35,7 @@ echo "Installation of the development packages"
 ###############################################################################
 
 list=(
+plank
 xcompmgr
 feh
 firefox
