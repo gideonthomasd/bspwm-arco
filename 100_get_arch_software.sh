@@ -100,6 +100,8 @@ nitrogen
 flatpak
 lxterminal
 gparted
+pulsemixer
+htop
 )
 
 count=0
