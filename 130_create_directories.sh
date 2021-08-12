@@ -181,6 +181,7 @@ cp -r * ~/slstatus
 cd ..
 
 sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
+sudo cp autostart.sh ~/.local/share/dwm
 
 cd ~/dwm-flexipatch
 tar -xzvf patch.tar.gz
