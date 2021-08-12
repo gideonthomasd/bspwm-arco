@@ -3,7 +3,7 @@ import os
 import re
 import socket
 import subprocess
-from libqtile import qtile, layout
+from libqtile import layout
 from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -194,7 +194,7 @@ layouts = [
           bg_color = '293136',
            font = 'novamono for powerline',
             fontsize = 13,
-            panel_width = 120,
+            panel_width = 130,
             inactive_bg = 'a1acff',
             inactive_fg = '000000',
             sections = ['Qtile'],
@@ -202,7 +202,7 @@ layouts = [
            section_fg = 'ffffff',
             section_left = 10
     ),
-    #layout.MonadTall(margin=15, border_width=3, border_focus="#bc7cf7", border_normal="#4c566a", new_client_position='after current', align=1),
+    layout.MonadTall(margin=15, border_width=3, border_focus="#bc7cf7", border_normal="#4c566a", new_client_position='after current', align=1),
     #new_at_current=True, align=1),
     #layout.MonadWide(margin=15, border_width=3, border_focus="#bc7cf7", border_normal="#4c566a"),
     #layout.MonadTall(**layout_theme, new_client_position='after current', align=1),
@@ -440,9 +440,9 @@ screens = [
                 ),
 
                 widget.TextBox(
-                    text=" ",
+                    text=" ",
                     font="Ubuntu Nerd Font",
-                    fontsize=14,
+                    fontsize=20,
                     foreground=colors[0],
                     background=colors[8],
                     padding=0,
@@ -468,7 +468,7 @@ screens = [
                 ),
 
                 widget.TextBox(
-					text='',
+					text='',
                     #text="蓼",
                     background=colors[9],
                     foreground=colors[0],
@@ -605,16 +605,16 @@ dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(float_rules=[
+#floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
-    *layout.Floating.default_float_rules,
-    Match(wm_class='confirmreset'),  # gitk
-    Match(wm_class='makebranch'),  # gitk
-    Match(wm_class='maketag'),  # gitk
-    Match(wm_class='ssh-askpass'),  # ssh-askpass
-    Match(title='branchdialog'),  # gitk
-    Match(title='pinentry'),  # GPG key password entry
-])
+ #   *layout.Floating.default_float_rules,
+  #  Match(wm_class='confirmreset'),  # gitk
+   ## Match(wm_class='makebranch'),  # gitk
+    #Match(wm_class='maketag'),  # gitk
+    #Match(wm_class='ssh-askpass'),  # ssh-askpass
+    #Match(title='branchdialog'),  # gitk
+    #Match(title='pinentry'),  # GPG key password entry
+#])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
