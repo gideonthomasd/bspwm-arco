@@ -194,13 +194,13 @@ layouts = [
           bg_color = '293136',
            font = 'novamono for powerline',
             fontsize = 13,
-            panel_width = 80,
+            panel_width = 120,
             inactive_bg = 'a1acff',
             inactive_fg = '000000',
             sections = ['Qtile'],
             section_fontsize = 13,
            section_fg = 'ffffff',
-            section_left = 30
+            section_left = 10
     ),
     #layout.MonadTall(margin=15, border_width=3, border_focus="#bc7cf7", border_normal="#4c566a", new_client_position='after current', align=1),
     #new_at_current=True, align=1),
