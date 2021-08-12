@@ -160,6 +160,17 @@ cp bashrc ~/.bashrc
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+########dwm##############################
+
+
+
+cd ~/dwm-flexipatch
+tar -xzvf patch.tar.gz
+sudo make clean install
+
+cd ~/slstatus
+sudo make clean install
+
 
 echo "SNAP: For menu entry copy /var/lib/snapd/desktop/applications to /home/phil/.local/share/applications"
 echo "SNAP : From sxhkd do 'snap run brave' instead of just 'brave' "
