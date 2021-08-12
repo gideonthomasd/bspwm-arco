@@ -162,7 +162,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ########dwm##############################
 
-
+sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
 
 cd ~/dwm-flexipatch
 tar -xzvf patch.tar.gz
