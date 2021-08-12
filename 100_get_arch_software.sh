@@ -102,6 +102,7 @@ lxterminal
 gparted
 pulsemixer
 htop
+qtile
 )
 
 count=0
