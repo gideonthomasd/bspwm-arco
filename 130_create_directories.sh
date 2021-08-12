@@ -161,8 +161,16 @@ cp bashrc ~/.bashrc
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 ########dwm##############################
+
+mkdir -p ~/.local/share/dwm
+sudo mkdir -p /usr/share/xsessions
+
 mkdir -p ~/dwm-flexipatch
 mkdir -p ~/slstatus
+
+cd slstatus
+chmod +x ram
+cd ..
 
 cd dwm-flexipatch
 cp -r * ~/dwm-flexipatch
@@ -171,9 +179,6 @@ cd ..
 cd slstatus
 cp -r * ~/slstatus
 cd ..
-
-
-
 
 sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
 
