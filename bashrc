@@ -162,5 +162,5 @@ alias update="sudo timeshift --create && sudo pacman -Syyu"
 
 #########To make xterm transparent
 #[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
-
-#neofetch
+alias fixsnap="find -L ~/.local/share/applications -type l -delete && ln -sf /var/lib/snapd/desktop/applications/*.desktop ~/.local/share/applications/"
+neofetch
