@@ -34,6 +34,10 @@ chmod +x tint2rc
 chmod +x tint2-sessionfile
 cd ..
 
+cd qtile
+chmod +x *.sh
+cd ..
+
 #######################################################
 
 if [ ! -d $HOME"/.config" ] 
@@ -49,6 +53,7 @@ fi
 
 mkdir -p $HOME"/.config/polybar-bspwm"
 mkdir -p $HOME"/.config/lxterminal"
+mkdir -p $HOME"/.config/qtile"
 
 if [ ! -d $HOME"/.config/bspwm" ]
 then
@@ -99,6 +104,12 @@ fi
 #[ -d $HOME"/.config/termite" ] || mkdir -p $HOME"/.config/termite"
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 #[ -d $HOME"/.config/jgmenu" ] || mkdir -p $HOME"/.config/jgmenu"
+
+cd qtile
+cp -r * ~/.config/qtile
+cd ..
+
+
 cd lxterminal
 cp -r * ~/.config/lxterminal
 cd ..
