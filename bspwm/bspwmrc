@@ -55,4 +55,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a firefox:Navigator desktop=^2
 bspc rule -a Geany desktop=^3
-bspc rule -a Xfce4-terminal state=floating
+#bspc rule -a Xfce4-terminal state=floating
