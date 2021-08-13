@@ -103,6 +103,8 @@ gparted
 pulsemixer
 htop
 qtile
+i3-gaps
+i3blocks
 )
 
 count=0
