@@ -160,7 +160,27 @@ cp bashrc ~/.bashrc
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-########dwm##############################
+#### Install i3 ##########################
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3blocks
+
+cd i3
+chmod +x testwallpaper
+cd ..
+
+cd i3blocks
+chmod +x *.sh
+cd ..
+
+cd i3
+cp -r * ~/.config/i3
+cd ..
+
+cd i3blocks
+cp -r * ~/.config/i3blocks
+cd ..
+
+######## Install DWM ##############################
 
 mkdir -p ~/.local/share/dwm
 sudo mkdir -p /usr/share/xsessions
