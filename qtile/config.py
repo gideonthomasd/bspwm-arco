@@ -3,7 +3,7 @@ import os
 import re
 import socket
 import subprocess
-from libqtile import layout
+from libqtile import layout, qtile
 from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -241,12 +241,17 @@ class Commands:
 
 commands = Commands()
 
+#def open_weather(qtile):
+#	qtile.cmd_spawn('lxterminal -e "curl wttr.in/Caerphilly && read varname" ')
+
 widget_defaults = dict(
     font='Inconsolata for powerline',
     fontsize=18,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
+
+
 
 screens = [
     Screen(
@@ -397,7 +402,7 @@ screens = [
                     foreground=colors[11],
                     background=colors[3],
                     padding=0,
-                    #mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("lxterminal -e htop")},
+                   
                 ),
 				
 				widget.GenPollText(
@@ -406,7 +411,9 @@ screens = [
                     #mouse_callbacks={'Button1' : openweather},
                     func = commands.get_ls,
                     update_interval=600,
-                    background = colors[3]
+                    background = colors[3],
+                   mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('lxterminal -e "curl wttr.in/Caerphilly && read varname"')},
+                    #mouse_callbacks={'Button1': open_weather},
                     ),
 
                 widget.TextBox(
