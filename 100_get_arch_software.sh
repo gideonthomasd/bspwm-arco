@@ -86,7 +86,7 @@ sxhkd
 mpv
 vlc
 youtube-dl
-xdotool
+#xdotool
 pacman-contrib
 bspwm
 cronie
