@@ -105,6 +105,9 @@ htop
 qtile
 i3-gaps
 i3blocks
+sxiv
+xdotool
+trayer
 )
 
 count=0
