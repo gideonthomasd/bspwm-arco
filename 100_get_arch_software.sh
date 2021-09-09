@@ -108,6 +108,8 @@ i3blocks
 sxiv
 xdotool
 trayer
+htop
+moc
 )
 
 count=0
