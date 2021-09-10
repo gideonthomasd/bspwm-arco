@@ -110,6 +110,8 @@ xdotool
 trayer
 htop
 moc
+xmonad
+xmonad-contrib
 )
 
 count=0
