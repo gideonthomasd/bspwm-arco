@@ -394,6 +394,7 @@ myKeys =
         , ("<F12>", spawn "thunar" )
         , ("<F9>", spawn "brave" )
         , ("<F10>", spawn "jgmenu_run")
+        , ("<F11>", spawn "pamac-manager")
         , ("M-x", spawn "arcolinux-logout" )
         , ("M-<F1>", spawn "firefox" )
         , ("M-<F2>", spawn "pcmanfm" )
