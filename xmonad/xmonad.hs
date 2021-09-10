@@ -111,7 +111,7 @@ myStartupHook = do
     --spawnOnce "$HOME/.xmonad/autostart.sh"
     spawnOnce "xcompmgr &"
     spawnOnce "nm-applet &"
-    
+    spawnOnce "lxpolkit &"
     --spawnOnce "lxsession &"
     --spawnOnce "picom &"
     --spawnOnce "nm-applet &"
@@ -393,8 +393,8 @@ myKeys =
         , ("M-S-a", killAll)   -- Kill all windows on current workspace
         , ("<F12>", spawn "thunar" )
         , ("<F9>", spawn "brave" )
-        , ("<F10>", spawn "~/.config/bspwm/killjgmenu")
-        , ("M-x", spawn "~/powermenu.sh" )
+        , ("<F10>", spawn "jgmenu_run")
+        , ("M-x", spawn "arcolinux-logout" )
         , ("M-<F1>", spawn "firefox" )
         , ("M-<F2>", spawn "pcmanfm" )
         , ("M-<F3>", spawn "lxtask" )
