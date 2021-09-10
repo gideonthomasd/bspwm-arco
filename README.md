@@ -9,3 +9,4 @@ run ./100 etc files
 sudo systemctl enable lightdm
 
 Includes openbox uses shortcuts
+xmonad --recompile later then logout
