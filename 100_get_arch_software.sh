@@ -112,6 +112,7 @@ htop
 moc
 xmonad
 xmonad-contrib
+xmobar
 )
 
 count=0
