@@ -248,7 +248,9 @@ sudo make clean install
 cd ~/st-transparency-scrollback
 sudo make clean install
 
-
+#########################Install bumblebee-status files - mine
+cd ~/bspwm-arco/i3/bumblebee-status/myfiles
+sudo cp -r * /usr/share/bumblebee-status/bumblebee_status/modules/contrib
 
 echo "SNAP: For menu entry copy /var/lib/snapd/desktop/applications to /home/phil/.local/share/applications"
 echo "SNAP : From sxhkd do 'snap run brave' instead of just 'brave' "
