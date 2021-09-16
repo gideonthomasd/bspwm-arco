@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	lxterminal
+	st
 # For transparency do yay -S ....
 # program launcher
 super + p
@@ -51,7 +51,20 @@ F11
 	
 F12
 	thunar
-
+	
+ctrl + F1
+	st -e htop
+ctrl + F2
+	lxterminal -e 'curl wttr.in/Caerphilly && read'
+ctrl + F3
+	pamac-manager
+ctrl + F4
+	mocp -G
+ctrl + F5
+	gsimplecal
+	
+F1
+	lxterminal - e 'cat ~/help && read'
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

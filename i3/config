@@ -93,8 +93,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split) #ALTERED
 bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+m layout tabbed
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -192,7 +192,9 @@ bar {
 		position top
 		font pango: Mononoki Nerd Font 15
 #        #status_command i3status -c /home/phil/.config/i3/i3status.conf
-        status_command i3blocks -c /home/phil/.config/i3blocks/i3blocks.conf
+#        status_command i3blocks -c /home/phil/.config/i3blocks/i3blocks.conf
+        status_command /usr/bin/bumblebee-status -m mocp mymemory battery pasink time \
+		 -p time.format="%H:%M" -t iceberg-rainbow
 }
 
 # My positions

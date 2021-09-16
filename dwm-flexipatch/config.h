@@ -5,7 +5,7 @@
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
@@ -18,7 +18,7 @@ static int nomodbuttons                  = 1;   /* allow client mouse button bin
 static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
 static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappov         = 20;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
@@ -120,8 +120,8 @@ static char normbgcolor[]                = "#222222";
 static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#db8fd9";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
+static char selfgcolor[]                 = "#BC8F8F"; /* "#eeeeee"; */
+static char selbgcolor[]                 = "#BC8F8F"; /*"#005577"; */
 static char selbordercolor[]             = "#005577";
 static char selfloatcolor[]              = "#005577";
 
@@ -131,7 +131,7 @@ static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#005577";
+static char titleselbgcolor[]            = "#006666"; /*"#005577"; !!!!!!!  */
 static char titleselbordercolor[]        = "#005577";
 static char titleselfloatcolor[]         = "#005577";
 
@@ -141,7 +141,7 @@ static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#005577";
+static char tagsselbgcolor[]             = "#004444"; /*"#005577"; !!!!!!!*/
 static char tagsselbordercolor[]         = "#005577";
 static char tagsselfloatcolor[]          = "#005577";
 
@@ -334,10 +334,18 @@ static const char *const autostart[] = {
 #endif // COOL_AUTOSTART_PATCH
 
 #if SCRATCHPADS_PATCH
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+
+/*typedef struct {
+	const char *name;
+	const void *cmd;
+} Sp; */
+
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "mocp", NULL };
+/*const char *spcmd2[] = {"st", "-n", "spterm2", "-g", "120x44","-e", "ranger" , NULL }; */
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"spterm",      spcmd1},
+ /*  {"spterm2",     spcmd2}, */
 };
 #endif // SCRATCHPADS_PATCH
 
@@ -369,7 +377,8 @@ static Sp scratchpads[] = {
  * them. This works seamlessly with alternative tags and alttagsdecoration patches.
  */
 static char *tagicons[][NUMTAGS] = {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "I", "II", "III", "IV", "V", "VI", "VII" },
+/*	{ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, */
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
@@ -412,7 +421,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 *	WM_WINDOW_ROLE(STRING) = role
 	 *	_NET_WM_WINDOW_TYPE(ATOM) = wintype
-	 */
+	 
+	{ "st",     NULL,       NULL,       0,            1,           -1 }, */
+	 
 	RULE(.wintype = WTYPE "DIALOG", .isfloating = 1)
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
@@ -421,6 +432,7 @@ static const Rule rules[] = {
 	RULE(.class = "Firefox", .tags = 1 << 7)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
+/*	RULE(.instance = "spterm2", .tags = SPTAG(1), .isfloating = 1) */
 	#endif // SCRATCHPADS_PATCH
 };
 
@@ -530,7 +542,7 @@ static const BarRule barrules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 #if FLEXTILE_DELUXE_LAYOUT
 static const int nstack      = 0;    /* number of clients in primary stack area */
@@ -766,7 +778,7 @@ static const char *xkb_layouts[]  = {
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 #endif // NODMENU_PATCH
-static const char *dmenucmd[] = {
+/*static const char *dmenucmd[] = {
 	"dmenu_run",
 	#if !NODMENU_PATCH
 	"-m", dmenumon,
@@ -776,12 +788,14 @@ static const char *dmenucmd[] = {
 	"-nf", normfgcolor,
 	"-sb", selbgcolor,
 	"-sf", selfgcolor,
+	"-p", "\"Run \"",
 	#if BAR_DMENUMATCHTOP_PATCH
 	topbar ? NULL : "-b",
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
-};
+}; */
 static const char *termcmd[]  = { "lxterminal", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", normbordercolor, "-sf", normfloatcolor,"-p", "Run", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -807,13 +821,21 @@ static Key on_empty_keys[] = {
 };
 #endif // ON_EMPTY_KEYS_PATCH
 
+
+
 static Key keys[] = {
 	/* modifier                     key            function                argument */
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
+	{ MODKEY,                       XK_BackSpace, zoom,           {0} },
+	{ ControlMask,                       XK_BackSpace, zoom,           {0} },
+	{ MODKEY,                       XK_Left,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_Right,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY,             XK_y,     togglescratch,                  {.ui = 0 } },
+/*	{ MODKEY,             XK_z,     togglescratch,                  {.ui = 1 } }, */
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -989,7 +1011,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Escape,     togglenomodbuttons,     {0} },
 	#endif // NO_MOD_BUTTONS_PATCH
 	#if SCRATCHPADS_PATCH
-	{ MODKEY,                       XK_grave,      togglescratch,          {.ui = 0 } },
+	{ MODKEY|ControlMask,             XK_y,      togglescratch,          {.ui = 0 } },
 	{ MODKEY|ControlMask,           XK_grave,      setscratch,             {.ui = 0 } },
 	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.ui = 0 } },
 	#endif // SCRATCHPADS_PATCH
