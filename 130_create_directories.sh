@@ -180,6 +180,7 @@ cd i3blocks
 cp -r * ~/.config/i3blocks
 cd ..
 
+
 ######## Install xmonad ##########################
 mkdir -p ~/.xmonad
 mkdir -p ~/.config/xmobar
@@ -232,6 +233,10 @@ cd ..
 
 sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
 sudo cp autostart.sh ~/.local/share/dwm
+
+##############################Install bumblebee for i3########################
+cd ~/.config/i3/bumblebee-status
+makepkg -sicr
 
 cd ~/dwm-flexipatch
 tar -xzvf patch.tar.gz
