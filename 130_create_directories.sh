@@ -212,6 +212,8 @@ sudo mkdir -p /usr/share/xsessions
 mkdir -p ~/dwm-flexipatch
 mkdir -p ~/slstatus
 
+mkdir -p ~/st-transparency-scrollback
+
 cd slstatus
 chmod +x ram
 cd ..
@@ -224,6 +226,10 @@ cd slstatus
 cp -r * ~/slstatus
 cd ..
 
+cd st-transparency-scrollback
+cp -r * ~/st-transparency-scrollback
+cd ..
+
 sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
 sudo cp autostart.sh ~/.local/share/dwm
 
@@ -233,6 +239,10 @@ sudo make clean install
 
 cd ~/slstatus
 sudo make clean install
+
+cd ~/st-transparency-scrollback
+sudo make clean install
+
 
 
 echo "SNAP: For menu entry copy /var/lib/snapd/desktop/applications to /home/phil/.local/share/applications"
