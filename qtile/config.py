@@ -518,23 +518,46 @@ screens = [
                     foreground=colors[0],
                     background=colors[4],
                     fontsize=18,
-                    format='%d %b, %A',
+                    format='%d %b',
                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("gsimplecal")},
+                    
+                   
                 ),
-
-                widget.Sep(
-                    padding=6,
-                    linewidth=0,
-                    background=colors[4],
-                ),
-
+                
                 widget.TextBox(
                     text='\ue0be',
                     font="Inconsolata for powerline",
                     fontsize='33',
                     padding=0,
                     background=colors[4],
+                    foreground=colors[9],
+                ),
+                
+               widget.TextBox(
+                    text='',
+                    font="Inconsolata for powerline",
+                    fontsize='14',
+                    padding=0,
+                    background=colors[9],
+                    foreground=colors[0],
+                ),
+                
+                widget.Moc(
+                background=colors[9],
+                foreground=colors[0],
+                max_chars = 13,
+                ),
+
+                
+
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[9],
                     foreground=colors[7],
+                    
                 ),
 
                 widget.TextBox(
@@ -543,7 +566,7 @@ screens = [
                     fontsize='18',
                     padding=0,
                     background=colors[7],
-                    foreground=colors[0],
+                    foreground=colors[4],
                 ),
 
                 widget.Clock(
