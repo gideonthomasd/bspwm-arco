@@ -10,6 +10,10 @@ UUID=9974c187-2f2a-43a4-a609-75082bb119b2 /              ext4    defaults,noatim
 
 #INSERTED Partition named 'Games':
 #Use lsblk -f to get partition uuid:
-UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /run/media/phil/Games ext4 noauto,x-systemd.automount 0 2
+UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /run/media/phil/Games ext4 noauto,x-systemd.automount 0 2 
+
+OR
+
+UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /home/phil/backup  0 2
 
 #Then afterwards do: sudo chown phil:phil /run/media/phil/Games to make phil access.
