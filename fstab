@@ -14,6 +14,6 @@ UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /run/media/phil/Games ext4 noauto,x-sy
 
 OR
 
-UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /home/phil/backup  ext4  0 2
+UUID=6e1eefc5-7698-4f58-8d7b-a11c0967f3bc /home/phil/backup  ext4  defaults  0 2
 
 #Then afterwards do: sudo chown phil:phil /run/media/phil/Games to make phil access.
