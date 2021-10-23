@@ -113,6 +113,9 @@ moc
 xmonad
 xmonad-contrib
 xmobar
+picom
+leftwm
+xfce4-appfinder
 )
 
 count=0
