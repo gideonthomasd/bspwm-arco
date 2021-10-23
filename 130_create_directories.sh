@@ -6,6 +6,18 @@
 #fi
 
 ############ Make sh executable #######################
+cd leftwm
+chmod +x *.toml
+cd themes
+cd eden
+cd scripts
+chmod +x *.sh
+cd ..
+cd ..
+cd ..
+cd ..
+
+
 cd bspwm
 chmod +x bspwmrc
 chmod +x testwallpaper
@@ -101,9 +113,15 @@ then
 mkdir -p $HOME"/.config/tint2"
 fi
 
+mkdir -p $HOME"/.config/leftwm"
+
 #[ -d $HOME"/.config/termite" ] || mkdir -p $HOME"/.config/termite"
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 #[ -d $HOME"/.config/jgmenu" ] || mkdir -p $HOME"/.config/jgmenu"
+
+cd leftwm
+cp -r * ~/.config/leftwm
+cd ..
 
 cd qtile
 cp -r * ~/.config/qtile
