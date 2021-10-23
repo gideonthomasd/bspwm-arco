@@ -10,6 +10,7 @@ cd leftwm
 chmod +x *.toml
 cd themes
 cd eden
+chmod +x up down change_to_tag
 cd scripts
 chmod +x *.sh
 cd ..
