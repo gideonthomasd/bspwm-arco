@@ -8,7 +8,7 @@ super + Return
 # For transparency do yay -S ....
 # program launcher
 super + p
-	dmenu_run
+	dmenu_run -fn "Noto Sans Regular-16" -sb "#990000" -sf "#FFFF66" -p "Run: "
 
 ctrl + g
 	geany
@@ -62,6 +62,16 @@ ctrl + F4
 	mocp -G
 ctrl + F5
 	gsimplecal
+	
+ctrl + shift + m
+	lxterminal -e mocp
+
+ctrl + shift + n
+	mocp --next
+	
+ctrl + shift + p
+	mocp --previous
+
 	
 F1
 	lxterminal - e 'cat ~/help && read'
