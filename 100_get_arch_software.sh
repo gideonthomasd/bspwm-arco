@@ -118,6 +118,7 @@ leftwm
 xfce4-appfinder
 nerd-fonts-source-code-pro
 arcolinux-candy-beauty-git
+leftwm-theme-git
 )
 
 count=0
