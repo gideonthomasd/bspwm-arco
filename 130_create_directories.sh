@@ -18,6 +18,18 @@ cd ..
 cd ..
 cd ..
 
+cd leftwm
+chmod +x *.toml
+cd themes
+cd parker
+chmod +x up down change_to_tag
+cd scripts
+chmod +x *.sh
+cd ..
+cd ..
+cd ..
+cd ..
+
 
 cd bspwm
 chmod +x bspwmrc
