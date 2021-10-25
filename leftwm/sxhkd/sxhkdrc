@@ -59,6 +59,9 @@ ctrl + shift + n
 	
 ctrl + shift + p
 	mocp --previous
+	
+super + z
+	xfce4-appfinder
 
 
 # make sxhkd reload its configuration files:
