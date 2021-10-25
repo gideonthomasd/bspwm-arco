@@ -121,6 +121,7 @@ arcolinux-candy-beauty-git
 leftwm-theme-git
 sddm
 arcolinux-tweak-tool-git
+appimagelauncher
 )
 
 count=0
