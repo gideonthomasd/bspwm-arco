@@ -119,6 +119,8 @@ xfce4-appfinder
 nerd-fonts-source-code-pro
 arcolinux-candy-beauty-git
 leftwm-theme-git
+sddm
+arcolinux-tweak-tool-git
 )
 
 count=0
