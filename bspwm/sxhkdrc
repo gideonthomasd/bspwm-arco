@@ -71,6 +71,9 @@ ctrl + shift + n
 	
 ctrl + shift + p
 	mocp --previous
+	
+ctrl + Right
+	feh --bg-scale --randomize ~/Pictures/wallpapers/*
 
 	
 F1
