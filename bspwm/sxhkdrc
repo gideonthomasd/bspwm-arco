@@ -74,6 +74,9 @@ ctrl + shift + p
 	
 ctrl + Right
 	feh --bg-scale --randomize ~/Pictures/wallpapers/*
+	
+super + z
+	xfce4-appfinder
 
 	
 F1
