@@ -23,7 +23,7 @@ super + F1
 	firefox
 
 super + F2
-	pcmanfm
+	thunar
 	
 super + F3
 	lxtask
@@ -50,7 +50,7 @@ F11
         xfce4-terminal --drop-down
 	
 F12
-	thunar
+	pcmanfm
 	
 ctrl + F1
 	st -e htop
