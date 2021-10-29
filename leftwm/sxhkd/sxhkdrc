@@ -23,7 +23,7 @@ super + F1
 	firefox
 
 super + F2
-	pcmanfm
+	thunar
 	
 super + F3
 	lxtask
@@ -46,7 +46,7 @@ F11
         pamac-manager
 	
 F12
-	thunar
+	pcmanfm
 	
 ctrl + Right
 	feh --bg-scale --randomize ~/Pictures/wallpapers/*
