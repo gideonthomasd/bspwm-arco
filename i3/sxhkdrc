@@ -23,7 +23,7 @@ super + F1
 	firefox
 
 super + F2
-	pcmanfm
+	thunar
 	
 super + F3
 	lxtask
@@ -46,7 +46,7 @@ F11
         xfce4-terminal --drop-down
 	
 F12
-	thunar
+	pcmanfm
 	
 ctrl + Right
 	feh --bg-scale --randomize ~/Pictures/wallpapers/*
@@ -59,6 +59,9 @@ ctrl + shift + n
 	
 ctrl + shift + p
 	mocp --previous
+	
+super + z
+	xfce4-appfinder
 
 
 # make sxhkd reload its configuration files:
