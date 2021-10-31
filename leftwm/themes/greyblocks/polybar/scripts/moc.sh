@@ -23,4 +23,5 @@ else
 fi
 
 #this=$this | sed '$!d'
-echo %{T3} $icon$this" " %{T-}
+echo " "$icon$this" "
+#echo %{T3} $icon$this" " %{T-}
