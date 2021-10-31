@@ -9,6 +9,20 @@
 cd leftwm
 chmod +x *.toml
 cd themes
+cd greyblocks
+chmod +x up down change_to_tag
+cd polybar
+cd scripts
+chmod +x *.sh
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+
+cd leftwm
+chmod +x *.toml
+cd themes
 cd eden
 chmod +x up down change_to_tag
 cd scripts
