@@ -122,6 +122,8 @@ leftwm-theme-git
 sddm
 arcolinux-tweak-tool-git
 appimagelauncher
+blueman
+pulseaudio-bluetooth
 )
 
 count=0
