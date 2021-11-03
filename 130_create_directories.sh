@@ -5,7 +5,7 @@
 #sudo mkdir -p /usr/share/xsessions
 #fi
 
-############ Make sh executable #######################
+############ Make sh executable #######################  padsp mocp ####### (if needed) ######################
 cd leftwm
 chmod +x *.toml
 cd themes
