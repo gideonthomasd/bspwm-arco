@@ -112,6 +112,7 @@ myStartupHook = do
     spawnOnce "xcompmgr &"
     spawnOnce "nm-applet &"
     spawnOnce "lxpolkit &"
+    spawnOnce "blueman-applet &"
     --spawnOnce "lxsession &"
     --spawnOnce "picom &"
     --spawnOnce "nm-applet &"
@@ -391,17 +392,18 @@ myKeys =
     -- KB_GROUP Kill windows
         , ("M-w", kill1)     -- Kill the currently focused client
         , ("M-S-a", killAll)   -- Kill all windows on current workspace
-        , ("<F12>", spawn "thunar" )
+        , ("<F12>", spawn "pcmanfm" )
         , ("<F9>", spawn "brave" )
         , ("<F10>", spawn "jgmenu_run")
         , ("<F11>", spawn "pamac-manager")
         , ("M-x", spawn "arcolinux-logout" )
         , ("M-<F1>", spawn "firefox" )
-        , ("M-<F2>", spawn "pcmanfm" )
+        , ("M-<F2>", spawn "thunar" )
         , ("M-<F3>", spawn "lxtask" )
         , ("M-v", spawn "pavucontrol" )
         , ("M-<F4>", spawn "blueman-manager" )
         , ("M-g", spawn "geany" )
+        , ("C-<Right>", spawn "feh --bg-scale --randomize ~/Pictures/wallpapers/*" )
         
        
 
