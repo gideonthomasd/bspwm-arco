@@ -17,7 +17,7 @@ ctrl + v
 	pavucontrol
 
 super + d
-        doublecmd
+	rofi -modi drun -show drun -disable-history -icon-theme "Papirus" -show-icons
 	
 super + F1
 	firefox
@@ -64,7 +64,7 @@ ctrl + F5
 	gsimplecal
 	
 ctrl + shift + m
-	lxterminal -e mocp
+	lxterminal -e 'padsp mocp'
 
 ctrl + shift + n
 	mocp --next
@@ -77,6 +77,10 @@ ctrl + Right
 	
 super + z
 	xfce4-appfinder
+	
+super + {_,shift + }@space
+	bspc node -f {next,prev}.local.!hidden.window
+
 
 	
 F1
@@ -199,7 +203,7 @@ super + alt + shift + {h,j,k,l}
 	
 # Move window and move with it
 #alt + super + Right
-   # bspc node -d {prev,next}.local -f
+   #bspc node -d {prev,next}.local -f
    
 #alt + super + Left
    # bspc node -d {next,prev}.local -f    
