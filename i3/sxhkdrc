@@ -17,7 +17,7 @@ super + v
 	pavucontrol
 
 super + d
-        doublecmd
+	rofi -modi drun -show drun -disable-history -icon-theme "Papirus" -show-icons
 	
 super + F1
 	firefox
@@ -52,7 +52,7 @@ ctrl + Right
 	feh --bg-scale --randomize ~/Pictures/wallpapers/*
 	
 ctrl + shift + m
-	lxterminal -e mocp
+	lxterminal -e 'padsp mocp'
 
 ctrl + shift + n
 	mocp --next
