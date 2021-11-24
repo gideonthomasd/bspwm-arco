@@ -246,7 +246,7 @@ commands = Commands()
 #	qtile.cmd_spawn('lxterminal -e "curl wttr.in/Caerphilly && read varname" ')
 
 widget_defaults = dict(
-    font='Ubuntu Nerd Font',
+    font='Inconsolata for powerline',
     fontsize=18,
     padding=3,
 )
@@ -273,14 +273,14 @@ screens = [
                     foreground=colors[8],
                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("jgmenu_run")},
                     ),
-                #widget.TextBox(
-                #    text='\ue0be',
-                #    font="Inconsolata for powerline",
-                #    fontsize='33',
-                #    padding=0,
-                #    background=colors[3],
-                #    foreground=colors[0],
-               # ),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[3],
+                    foreground=colors[0],
+                ),
 
                 #widget.TextBox(
                 #    text='|',
@@ -325,14 +325,14 @@ screens = [
                         name_transform=lambda name: name.upper(),
                 ),
 
-                #widget.TextBox(
-                #    text='\ue0be',
-                #    font="Inconsolata for powerline",
-                #    fontsize='33',
-                 #   padding=0,
-                #    background=colors[0],
-                #    foreground=colors[4],
-               # ),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[0],
+                    foreground=colors[4],
+                ),
 
                 widget.WindowName(
                     background=colors[4],
@@ -341,26 +341,26 @@ screens = [
                     fontsize=16,
                         ),
 
-                #widget.TextBox(
-                #    text='\ue0be',
-                #    font="Inconsolata for powerline",
-                #    fontsize='33',
-                #    padding=0,
-                #    background=colors[4],
-                #    foreground=colors[0],
-                #),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[4],
+                    foreground=colors[0],
+                ),
 
 
                 widget.Spacer(),
 
-              # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-               #     fontsize='33',
-               #     padding=0,
-               #     background=colors[0],
-                #    foreground="#006666",
-              #  ),
+               widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[0],
+                    foreground="#006666",
+                ),
 
                 widget.CurrentLayoutIcon(
                     custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
@@ -375,14 +375,14 @@ screens = [
                 #widget.CurrentLayout(
 				#	background=colors[7],
                 #),
-                # widget.TextBox(
-                #    text='\ue0be',
-                #    font="Inconsolata for powerline",
-                #    fontsize='33',
-                 #   padding=0,
-                 #   background="#006666",
-                #    foreground=colors[3],
-               # ),
+                 widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background="#006666",
+                    foreground=colors[3],
+                ),
 
                # widget.DF(
 	           # fmt = ' {}',
@@ -396,7 +396,7 @@ screens = [
 	           # mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("st -e storage.sh")},
 				#),
 				widget.TextBox(
-					text="  ",
+					text=" ",
                     #text=" ",
                     font="Ubuntu Nerd Font",
                     fontsize=20,
@@ -416,26 +416,15 @@ screens = [
                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('lxterminal -e "curl wttr.in/Caerphilly && read varname"')},
                     #mouse_callbacks={'Button1': open_weather},
                     ),
-                    
-                    widget.TextBox(
-					text=" ",
-                    #text=" ",
-                    font="Ubuntu Nerd Font",
-                    fontsize=20,
-                    foreground=colors[11],
-                    background=colors[3],
-                    padding=0,
-                   
-                ),
 
-               # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-               #     fontsize='33',
-               #     padding=0,
-               #     background=colors[3],
-               #     foreground=colors[6],
-               # ),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[3],
+                    foreground=colors[6],
+                ),
 
                 widget.Systray(
                     background=colors[6],
@@ -449,14 +438,14 @@ screens = [
                     background=colors[6],
                 ),
 
-               # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-               #     fontsize='33',
-               #     padding=0,
-               #     background=colors[6],
-               #     foreground=colors[8],
-               # ),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[6],
+                    foreground=colors[8],
+                ),
 
                 widget.Sep(
                     padding=6,
@@ -465,7 +454,7 @@ screens = [
                 ),
 
                 widget.TextBox(
-                    text="  ",
+                    text=" ",
                     font="Ubuntu Nerd Font",
                     fontsize=20,
                     foreground=colors[0],
@@ -477,23 +466,23 @@ screens = [
                 widget.Memory(
                     background=colors[8],
                     foreground=colors[0],
-                    font="Ubuntu Nerd Font",
-                    fontsize=15,
-                    format='{MemUsed: .0f} MB  ',
+                    font="Inconsolata for powerline",
+                    fontsize=18,
+                    format='{MemUsed: .0f} MB',
                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("lxterminal -e htop")},
                 ),
 
-               # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-               #     fontsize='33',
-               #     padding=0,
-               #     background=colors[8],
-               #     foreground=colors[9],
-              #  ),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[8],
+                    foreground=colors[9],
+                ),
 
                 widget.TextBox(
-					text='  ',
+					text='',
                     #text="蓼",
                     background=colors[9],
                     foreground=colors[0],
@@ -506,36 +495,30 @@ screens = [
                     fontsize=18,
                     mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("xfce4-terminal -e pulsemixer")},
                 ),
+
                 widget.TextBox(
-					text=' ',
-                    #text="蓼",
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
                     background=colors[9],
-                    foreground=colors[0],
+                    foreground=colors[4],
                 ),
 
-               # widget.TextBox(
-               #     text='\ue0be',
-                ##    font="Inconsolata for powerline",
-                #    fontsize='33',
-                #    padding=0,
-                #    background=colors[9],
-                #    foreground=colors[4],
-               # ),
-
                 widget.TextBox(
-                    text='   ',
+                    text=' ',
                     font="Ubuntu Nerd Font",
-                    fontsize='15',
+                    fontsize='14',
                     padding=0,
                     background=colors[4],
                     foreground=colors[0],
                 ),
 
                 widget.Clock(
-                    font="Ubuntu Nerd Font",
+                    font="Inconsolata for powerline",
                     foreground=colors[0],
                     background=colors[4],
-                    fontsize=15,
+                    fontsize=18,
                     format='%d %b',
                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("gsimplecal")},
                     
@@ -543,22 +526,13 @@ screens = [
                 ),
                 
                 widget.TextBox(
-                    text=' ',
-                    font="Ubuntu Nerd Font",
-                    fontsize='15',
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
                     padding=0,
                     background=colors[4],
-                    foreground=colors[0],
+                    foreground=colors[9],
                 ),
-                
-             #   widget.TextBox(
-             #       text='\ue0be',
-              #      font="Inconsolata for powerline",
-              #      fontsize='33',
-              #      padding=0,
-               #     background=colors[4],
-               #     foreground=colors[9],
-              #  ),
                 
                widget.TextBox(
                     text='',
@@ -572,23 +546,23 @@ screens = [
                 widget.Moc(
                 background=colors[9],
                 foreground=colors[0],
-                max_chars = 19,
+                max_chars = 13,
                 ),
 
                 
 
-               # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-               #     fontsize='33',
-               #     padding=0,
-               #     background=colors[9],
-                #    foreground=colors[7],
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[9],
+                    foreground=colors[7],
                     
-               # ),
+                ),
 
                 widget.TextBox(
-                    text='  ',
+                    text=' ',
                     font="Inconsolata for powerline",
                     fontsize='18',
                     padding=0,
@@ -597,21 +571,21 @@ screens = [
                 ),
 
                 widget.Clock(
-                    font="Ubuntu Nerd Font",
+                    font="Inconsolata for powerline",
                     foreground=colors[0],
                     background=colors[7],
-                    fontsize=15,
-                    format='%I:%M %p '
+                    fontsize=18,
+                    format='%I:%M %p'
                 ),
 
-               # widget.TextBox(
-               #     text='\ue0be',
-               #     font="Inconsolata for powerline",
-                #    fontsize='33',
-                #    padding=0,
-                #    background=colors[7],
-                #    foreground=colors[3],
-                #),
+                widget.TextBox(
+                    text='\ue0be',
+                    font="Inconsolata for powerline",
+                    fontsize='33',
+                    padding=0,
+                    background=colors[7],
+                    foreground=colors[3],
+                ),
 
                 widget.Sep(
                     padding=6,
