@@ -42,6 +42,7 @@ func_category() {
 func_category Arcolinux
 
 list=(
+downgrade
 ttf-iosevka-nerd
 timeshift
 polybar
