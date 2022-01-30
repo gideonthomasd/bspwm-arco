@@ -146,6 +146,28 @@ mkdir -p $HOME"/.config/leftwm"
 #[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 #[ -d $HOME"/.config/jgmenu" ] || mkdir -p $HOME"/.config/jgmenu"
 
+####Install Spectrtwm####################
+
+cd spectrwm
+cd scripts
+chmod +x *.sh
+cd ..
+cd polybar
+chmod +x *.sh
+cd scripts
+chmod +x *.sh
+cd ..
+cd ..
+cd ..
+
+
+mkdir -p ~/.config/spectrwm
+cp spectrwm.conf ~/.spectrwm.conf
+
+cd spectrwm
+cp -r * ~/.config/spectrwm
+cd ..
+
 cd leftwm
 cp -r * ~/.config/leftwm
 cd ..
